@@ -23,16 +23,16 @@ public class InterpreInputControllerScript : MonoBehaviour
     }
 
     public void MoveLeft(){
-        if(!iskolarDirection){ // if facing right, rotate
-            transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
-        }
+        // if(!iskolarDirection){ // if facing right, rotate
+        //     transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
+        // }
         moveLeft = true;
         iskolarDirection = true;
     }
     public void MoveRight(){
-        if(iskolarDirection){ // if facing left, rotate
-            transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
-        }
+        // if(iskolarDirection){ // if facing left, rotate
+        //     transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
+        // }
         moveRight = true;
         iskolarDirection = false;
     }
