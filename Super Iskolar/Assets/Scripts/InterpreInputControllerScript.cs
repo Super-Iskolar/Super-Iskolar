@@ -9,6 +9,12 @@ public class InterpreInputControllerScript : MonoBehaviour
     public Sprite left,right;
     private float moveSpeed, jumpForce, dashForce,dashTime, dashTimeCurrent, dashCoolDown, dashTimer = 0f;
     private bool moveLeft, moveRight,moveDash, isIskolarFacingleft, isDashing;
+    
+    // added for FallDetector
+    public Vector3 respawnPoint; // records start position
+    public GameObject fallDetector; // links script to FallDetector??
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +29,7 @@ public class InterpreInputControllerScript : MonoBehaviour
         moveRight = false;
         moveDash = false;
         isIskolarFacingleft = false; // facing right
+        respawnPoint = transform.position; // records start position for FallDetector
     }
 
     public void MoveLeft(){
@@ -43,6 +50,9 @@ public class InterpreInputControllerScript : MonoBehaviour
         if (rb.velocity.y ==0){
             rb.AddForce(Vector2.up * jumpForce);
         }
+        
+        
+        
     }
     public void StopMoving(){
         moveLeft = false;
@@ -88,5 +98,17 @@ public class InterpreInputControllerScript : MonoBehaviour
         }else{
             sp.sprite = right;
         }
+        
+        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y); // for FallDetector
     }
+    
+    // detect fall method (run when player enters collider of object)
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+    }
+    
 }
