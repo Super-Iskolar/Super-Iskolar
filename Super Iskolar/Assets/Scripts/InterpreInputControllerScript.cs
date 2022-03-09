@@ -7,34 +7,37 @@ public class InterpreInputControllerScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sp;
     public Sprite left,right;
-    private float moveSpeed, jumpForce;
-    private bool moveLeft, moveRight,moveDash, iskolarDirection;
+    private float moveSpeed, jumpForce, dashForce,dashTime, dashTimeCurrent, dashCoolDown, dashTimer = 0f;
+    private bool moveLeft, moveRight,moveDash, isIskolarFacingleft, isDashing;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sp= GetComponent<SpriteRenderer>();
-        moveSpeed = 5f;
+        moveSpeed = 6f;
         jumpForce = 500f;
+        dashForce = 6f;
+        dashTime = 0.15f;            // time period of dashing; counted using dashTimer
+        dashCoolDown = 1f;          // time period between dashes; counted using dashTime
         moveLeft = false;
         moveRight = false;
         moveDash = false;
-        iskolarDirection = false; // facing right
+        isIskolarFacingleft = false; // facing right
     }
 
     public void MoveLeft(){
-        // if(!iskolarDirection){ // if facing right, rotate
+        // if(!isIskolarFacingleft){ // if facing right, rotate
         //     transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
         // }
         moveLeft = true;
-        iskolarDirection = true;
+        isIskolarFacingleft = true;
     }
     public void MoveRight(){
-        // if(iskolarDirection){ // if facing left, rotate
+        // if(isIskolarFacingleft){ // if facing left, rotate
         //     transform.Rotate(0f, 180f, 0f); // rotate character orientation on x-axis
         // }
         moveRight = true;
-        iskolarDirection = false;
+        isIskolarFacingleft = false;
     }
     public void Jump(){
         if (rb.velocity.y ==0){
@@ -44,29 +47,43 @@ public class InterpreInputControllerScript : MonoBehaviour
     public void StopMoving(){
         moveLeft = false;
         moveRight = false;
-        moveDash = false;
         rb.velocity = Vector2.zero;
     }
     public void Dash(){
-        moveDash = true;
+        if(dashTimer<=0){
+            moveDash = true;
+            dashTimer = dashCoolDown;
+            dashTimeCurrent = dashTime;
+        }
     }
     // Update is called once per frame
     void Update()
-    {
-        if(moveLeft){
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-        }
-        if(moveRight){
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-        }
+    {   
+        if(dashTimer>0){dashTimer -= Time.deltaTime;} // countdown dash time        
         if(moveDash){
-            if(iskolarDirection){
-                rb.velocity = new Vector2(-3*moveSpeed, rb.velocity.y);
+            if(isIskolarFacingleft){
+                rb.velocity = new Vector2(-dashForce*moveSpeed, 0f);
+                dashTimeCurrent -= Time.deltaTime;
+                // rb.AddForce(Vector2.left * dashForce);
+                // rb.velocity = new Vector2(-3*moveSpeed, rb.velocity.y);
             }else{
-                rb.velocity = new Vector2(3*moveSpeed, rb.velocity.y);
+                rb.velocity = new Vector2(dashForce*moveSpeed, 0f);
+                dashTimeCurrent -= Time.deltaTime;
+                // rb.AddForce(Vector2.right * dashForce);
+                // rb.velocity = new Vector2(3*moveSpeed, rb.velocity.y);
+            }
+            if(dashTimeCurrent<0){
+                moveDash = false;
+                rb.velocity = Vector2.zero;
             }
         }
-        if(iskolarDirection){
+        else if(moveLeft){
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        }
+        else if(moveRight){
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        }
+        if(isIskolarFacingleft){
             sp.sprite = left;
         }else{
             sp.sprite = right;
