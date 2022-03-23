@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FallDetector
+  - PickUpLife
   layers:
   - Default
   - TransparentFX

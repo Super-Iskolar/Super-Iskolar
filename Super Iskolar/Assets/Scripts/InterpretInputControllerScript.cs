@@ -101,13 +101,18 @@ public class InterpretInputControllerScript : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y); // for FallDetector
     }
     
-    // detect fall method (run when player enters collider of object)
+    // detect fall method, additional life pickup (run when player enters collider of object)
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "FallDetector")
         {
             transform.position = respawnPoint;
             IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;
+        }
+        
+        if(collision.tag == "PickUpLife")
+        {
+            Destroy(collision.gameObject);
         }
     }
     
