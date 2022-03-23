@@ -113,6 +113,11 @@ public class InterpretInputControllerScript : MonoBehaviour
         if(collision.tag == "PickUpLife")
         {
             Destroy(collision.gameObject);
+            
+            if(IskolarSpriteScript.playerHP != 3)
+            {
+                IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP + 1;
+            }
         }
     }
     
