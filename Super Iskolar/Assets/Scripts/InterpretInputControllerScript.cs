@@ -107,6 +107,7 @@ public class InterpretInputControllerScript : MonoBehaviour
         if(collision.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+            IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;
         }
         
         if(collision.tag == "PickUpLife")
