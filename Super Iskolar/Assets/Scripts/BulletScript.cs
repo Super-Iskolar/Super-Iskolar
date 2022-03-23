@@ -16,6 +16,11 @@ public class BulletScript : MonoBehaviour
         } else{
             rb.velocity = transform.right * speed;
         }
+        StartCoroutine(SelfDestruct());
     }
-    
+     IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }
