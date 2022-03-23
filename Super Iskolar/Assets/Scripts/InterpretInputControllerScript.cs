@@ -11,11 +11,6 @@ public class InterpretInputControllerScript : MonoBehaviour
     private bool moveLeft, moveRight,moveDash, isDashing;
     public static bool isIskolarFacingleft;
     
-    // added for FallDetector
-    private Vector3 respawnPoint; // records start position
-    public GameObject fallDetector; // links script to FallDetector??
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +21,10 @@ public class InterpretInputControllerScript : MonoBehaviour
         dashForce = 6f;
         dashTime = 0.15f;            // time period of dashing; counted using dashTimer
         dashCoolDown = 1f;          // time period between dashes; counted using dashTime
-        respawnPoint = Vector3.zero;
         moveLeft = false;
         moveRight = false;
         moveDash = false;
         isIskolarFacingleft = false; // facing right
-        respawnPoint = transform.position; // records start position for FallDetector
     }
 
     public void MoveLeft(){
@@ -98,27 +91,7 @@ public class InterpretInputControllerScript : MonoBehaviour
             sp.sprite = right;
         }
         
-        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y); // for FallDetector
-    }
-    
-    // detect fall method, additional life pickup (run when player enters collider of object)
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "FallDetector")
-        {
-            transform.position = respawnPoint;
-            IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;
-        }
         
-        if(collision.tag == "PickUpLife")
-        {
-            Destroy(collision.gameObject);
-            
-            if(IskolarSpriteScript.playerHP != 3)
-            {
-                IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP + 1;
-            }
-        }
     }
     
 }
