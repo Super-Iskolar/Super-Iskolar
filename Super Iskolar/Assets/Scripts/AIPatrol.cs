@@ -54,7 +54,7 @@ public class AIPatrol : MonoBehaviour
     void Flip()
     {
         mustPatrol = false;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y); // flips enemy orientation; can comment out?
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y); // flips enemy orientation
         walkSpeed *= -1;
         mustPatrol = true;
     }
