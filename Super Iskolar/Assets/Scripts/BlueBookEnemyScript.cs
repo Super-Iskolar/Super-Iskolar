@@ -20,7 +20,7 @@ public class BlueBookEnemyScript : MonoBehaviour
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Pencil")
+        if(collision.tag != "Player")
         {
             Destroy(collision.gameObject);
             bluebookhealth = bluebookhealth - 1;
