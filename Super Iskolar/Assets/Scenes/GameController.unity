@@ -1337,7 +1337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1285253, y: 2.5800004, z: -9}
+  m_LocalPosition: {x: 4.575783, y: 2.5800004, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1787549976}
@@ -3694,7 +3694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479816727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9685252, y: 2.5800004, z: -9}
+  m_LocalPosition: {x: 5.415783, y: 2.5800004, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 265234744}
@@ -3797,7 +3797,7 @@ GameObject:
   - component: {fileID: 1511428033}
   m_Layer: 3
   m_Name: IskolarSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4222,6 +4222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverMenu: {fileID: 1266316366}
+  GameInputUI: {fileID: 478323204}
 --- !u!1 &1673149411
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,9 +6190,10 @@ GameObject:
   - component: {fileID: 1645549945960906462}
   - component: {fileID: 1645549945960906461}
   - component: {fileID: 1645549945960906460}
+  - component: {fileID: 1645549945960906452}
   m_Layer: 0
   m_Name: Bluebook-Idle1
-  m_TagString: FallDetector
+  m_TagString: BlueBookEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6211,6 +6213,19 @@ Transform:
   m_Father: {fileID: 2002506775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645549945960906452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645549945960906450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133b770dd87fc4e348cd135aa323c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluebookhealth: 10
 --- !u!212 &1645549945960906456
 SpriteRenderer:
   m_ObjectHideFlags: 0
