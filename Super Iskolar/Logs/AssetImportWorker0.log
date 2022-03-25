@@ -1252,3 +1252,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 791.244716 seconds.
+  path: Assets/Prefabs/Bluebook-Idle1.prefab
+  artifactKey: Guid(d39c9a73550cf5640a6e6ad30c82ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bluebook-Idle1.prefab using Guid(d39c9a73550cf5640a6e6ad30c82ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139a6fa1e914864be4ba7cb9bbf33a1a') in 0.161465 seconds 
+  Import took 0.280337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Prefabs/Pencil.prefab
+  artifactKey: Guid(6ffce11bc5166904c8a98d4f934b1236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Pencil.prefab using Guid(6ffce11bc5166904c8a98d4f934b1236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00e7bf1749196263a0deaa4e1f0b0c51') in 0.037017 seconds 
+  Import took 0.067285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001139 seconds.
+  path: Assets/Prefabs/UPOvalBench.prefab
+  artifactKey: Guid(4227f3d9d75bfbf478d0a356b5ce9e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UPOvalBench.prefab using Guid(4227f3d9d75bfbf478d0a356b5ce9e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e1d0a65a12a7ad1e9cb96f40d55b31') in 0.017546 seconds 
+  Import took 0.028077 seconds .
+

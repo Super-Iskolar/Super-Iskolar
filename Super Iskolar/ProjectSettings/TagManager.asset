@@ -7,6 +7,8 @@ TagManager:
   - FallDetector
   - PickUpLife
   - BlueBookEnemy
+  - Ground
+  - Pencil
   layers:
   - Default
   - TransparentFX
