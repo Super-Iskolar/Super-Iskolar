@@ -18,9 +18,8 @@ public class IskolarSpriteScript : MonoBehaviour
         if (playerHP > 3){                      // sets the maximum lives to 3
             playerHP = 3;
         }
-        if (playerHP < 0){                      // sets the minimum lives to 0
+        if (playerHP <= 0){                      // sets the minimum lives to 0
             playerHP = 0;
         }
-
     }
 }
