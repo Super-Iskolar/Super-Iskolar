@@ -2582,9 +2582,10 @@ GameObject:
   - component: {fileID: 1116791866}
   - component: {fileID: 1116791865}
   - component: {fileID: 1116791864}
+  - component: {fileID: 1116791869}
   m_Layer: 0
-  m_Name: Bluebook-Idle1
-  m_TagString: FallDetector
+  m_Name: BluebookEnemy1
+  m_TagString: BlueBookEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2748,6 +2749,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1116791869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116791862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133b770dd87fc4e348cd135aa323c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluebookhealth: 2
 --- !u!1 &1175464190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3451,7 @@ GameObject:
   - component: {fileID: 1439324136}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: BlueBookEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3770,7 +3784,7 @@ GameObject:
   - component: {fileID: 1511428033}
   m_Layer: 3
   m_Name: IskolarSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4086,9 +4100,10 @@ GameObject:
   - component: {fileID: 1623286525}
   - component: {fileID: 1623286524}
   - component: {fileID: 1623286523}
+  - component: {fileID: 1623286528}
   m_Layer: 0
-  m_Name: Bluebook-Idle1 (1)
-  m_TagString: FallDetector
+  m_Name: BluebookEnemy2
+  m_TagString: BlueBookEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4252,6 +4267,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1623286528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623286521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133b770dd87fc4e348cd135aa323c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluebookhealth: 2
 --- !u!1 &1673149411
 GameObject:
   m_ObjectHideFlags: 0
