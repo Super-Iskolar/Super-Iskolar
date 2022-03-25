@@ -6,8 +6,7 @@ TagManager:
   tags:
   - FallDetector
   - PickUpLife
-  - FallDetector2
-  - Ground
+  - BlueBookEnemy
   layers:
   - Default
   - TransparentFX

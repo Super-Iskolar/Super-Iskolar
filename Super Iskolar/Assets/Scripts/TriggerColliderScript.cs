@@ -37,6 +37,7 @@ public class TriggerColliderScript : MonoBehaviour
                 IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP + 1;
             }
         }
+        
     }
     
 }
