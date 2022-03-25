@@ -6,7 +6,7 @@ public class TriggerColliderScript : MonoBehaviour
 {
     public Rigidbody2D player;
     private Vector3 respawnPoint;
-    // public GameObject fallDetector; // only if fallDetector changes position
+    public GameObject fallDetector; // only if fallDetector changes position
     
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class TriggerColliderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //fallDetector.transform.position = new Vector2(player.transform.position.x, fallDetector.transform.position.y);
+        fallDetector.transform.position = new Vector2(player.transform.position.x, fallDetector.transform.position.y);
         //for changing of fallDetector position if necessary
     }
     
