@@ -7,6 +7,7 @@ TagManager:
   - FallDetector
   - PickUpLife
   - FallDetector2
+  - Ground
   layers:
   - Default
   - TransparentFX

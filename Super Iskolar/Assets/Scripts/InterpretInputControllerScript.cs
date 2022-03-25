@@ -8,7 +8,7 @@ public class InterpretInputControllerScript : MonoBehaviour
     private SpriteRenderer sp;
     public Sprite left,right;
     private float moveSpeed, jumpForce, dashForce,dashTime, dashTimeCurrent, dashCoolDown, dashTimer = 0f;
-    private bool moveLeft, moveRight,moveDash, isDashing;
+    private bool moveLeft, moveRight,moveDash, isDashing, isGrounded;
     public static bool isIskolarFacingleft;
     
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class InterpretInputControllerScript : MonoBehaviour
         moveRight = false;
         moveDash = false;
         isIskolarFacingleft = false; // facing right
+        isGrounded = false;
     }
 
     public void MoveLeft(){
@@ -42,7 +43,7 @@ public class InterpretInputControllerScript : MonoBehaviour
         isIskolarFacingleft = false;
     }
     public void Jump(){
-        if (rb.velocity.y ==0){
+        if (rb.velocity.y ==0 && isGrounded){
             rb.AddForce(Vector2.up * jumpForce);
         }
     }
@@ -93,5 +94,17 @@ public class InterpretInputControllerScript : MonoBehaviour
         
         
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Ground"){
+            isGrounded = true;
+        }
+    }
     
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Ground"){
+            isGrounded = false;
+        }
+    }
 }
