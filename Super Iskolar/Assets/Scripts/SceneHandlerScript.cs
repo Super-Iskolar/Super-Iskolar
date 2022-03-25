@@ -16,4 +16,7 @@ public class SceneHandlerScript : MonoBehaviour
     public void LoadSettingsScene(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("SettingsController");
     }
+    public void LoadTutorialScreen(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialController");
+    }
 }
