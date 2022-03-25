@@ -2260,6 +2260,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1645549946422693792, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645549946422693792, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.27
+      objectReference: {fileID: 0}
     - target: {fileID: 2029174826641042830, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3301,6 +3309,14 @@ PrefabInstance:
     - target: {fileID: 1645549946422693792, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645549946422693792, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645549946422693792, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2029174826641042830, guid: d39c9a73550cf5640a6e6ad30c82ff10, type: 3}
       propertyPath: m_RootOrder
@@ -6582,7 +6598,7 @@ GameObject:
   - component: {fileID: 1392781778879290327}
   - component: {fileID: 8970986117836343951}
   - component: {fileID: 7285650193596063706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UPOvalBench
   m_TagString: Ground
   m_Icon: {fileID: 0}

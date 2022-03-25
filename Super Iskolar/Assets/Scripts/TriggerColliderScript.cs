@@ -24,7 +24,7 @@ public class TriggerColliderScript : MonoBehaviour
     // detect fall method, additional life pickup (run when player enters collider of object)
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "FallDetector")
+        if(collision.tag == "FallDetector" || collision.tag == "BlueBookEnemy")
         {
             player.transform.position = respawnPoint;
             IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;

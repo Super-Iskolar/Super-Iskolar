@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1392781780710869042}
   - component: {fileID: 8970986119702010218}
   - component: {fileID: 7285650195429739583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UPOvalBench
   m_TagString: Ground
   m_Icon: {fileID: 0}

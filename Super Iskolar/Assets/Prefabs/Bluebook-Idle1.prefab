@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 1645549946422693805}
   - component: {fileID: 1645549946422693806}
   - component: {fileID: 1645549946422693807}
+  - component: {fileID: -6818050591767318060}
   m_Layer: 0
   m_Name: Bluebook-Idle1
-  m_TagString: FallDetector
+  m_TagString: BlueBookEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,3 +211,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3730171, y: 0.24316931}
   m_EdgeRadius: 0
+--- !u!114 &-6818050591767318060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645549946422693793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133b770dd87fc4e348cd135aa323c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluebookhealth: 10
