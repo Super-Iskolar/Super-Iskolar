@@ -1276,3 +1276,4 @@ Received Import Request.
 Start importing Assets/Prefabs/UPOvalBench.prefab using Guid(4227f3d9d75bfbf478d0a356b5ce9e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e1d0a65a12a7ad1e9cb96f40d55b31') in 0.017546 seconds 
   Import took 0.028077 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
