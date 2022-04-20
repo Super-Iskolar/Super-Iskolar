@@ -38,6 +38,11 @@ public class TriggerColliderScript : MonoBehaviour
                 IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP + 1;
             }
         }
+
+        if(collision.tag == "Collectible")
+        {
+            Destroy(collision.gameObject);
+        }
         
         if(collision.tag == "GoalLevel1")
         {

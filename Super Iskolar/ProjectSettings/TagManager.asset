@@ -12,6 +12,7 @@ TagManager:
   - GoalLevel1
   - GoalLevel2
   - GoalLevel3
+  - Collectible
   layers:
   - Default
   - TransparentFX
