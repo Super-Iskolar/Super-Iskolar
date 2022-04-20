@@ -39,14 +39,22 @@ public class TriggerColliderScript : MonoBehaviour
             }
         }
         
-        if(collision.tag == "Goal")
+        if(collision.tag == "GoalLevel1")
         {
             Time.timeScale = 1f;   
-            player.transform.position = respawnPoint;
-            IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;
             UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
         }
         
+        if(collision.tag == "GoalLevel2")
+        {
+            Time.timeScale = 1f;   
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
+        }
+        if(collision.tag == "GoalLevel3")
+        {
+            Time.timeScale = 1f;   
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        }
     }
     
 }
