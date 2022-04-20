@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerColliderScript : MonoBehaviour
 {
@@ -36,6 +37,14 @@ public class TriggerColliderScript : MonoBehaviour
             if(IskolarSpriteScript.playerHP != 3){
                 IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP + 1;
             }
+        }
+        
+        if(collision.tag == "Goal")
+        {
+            Time.timeScale = 1f;   
+            player.transform.position = respawnPoint;
+            IskolarSpriteScript.playerHP = IskolarSpriteScript.playerHP - 1;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
         }
         
     }

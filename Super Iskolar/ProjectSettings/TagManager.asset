@@ -9,6 +9,7 @@ TagManager:
   - BlueBookEnemy
   - Ground
   - Pencil
+  - Goal
   layers:
   - Default
   - TransparentFX
