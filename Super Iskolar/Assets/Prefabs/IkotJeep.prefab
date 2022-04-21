@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5421919120077221784}
   - component: {fileID: 5421919120077221785}
   - component: {fileID: 5278217385802952603}
+  - component: {fileID: -7588352004276391449}
   m_Layer: 0
   m_Name: IkotJeep
   m_TagString: Ground
@@ -136,3 +137,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.0421114, y: 2.1719012}
   m_EdgeRadius: 0
+--- !u!210 &-7588352004276391449
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421919120077221790}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

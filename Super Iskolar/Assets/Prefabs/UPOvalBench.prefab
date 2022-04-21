@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1392781780710869042}
   - component: {fileID: 8970986119702010218}
   - component: {fileID: 7285650195429739583}
+  - component: {fileID: 1219643557714827431}
   m_Layer: 6
   m_Name: UPOvalBench
   m_TagString: Ground
@@ -109,3 +110,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4161148, y: 0.58917284}
   m_EdgeRadius: 0
+--- !u!210 &1219643557714827431
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193888410843147417}
+  m_Enabled: 1
+  m_SortingLayerID: -1443394913
+  m_SortingLayer: -1
+  m_SortingOrder: 1
