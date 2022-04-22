@@ -4,11 +4,30 @@ using UnityEngine;
 
 public class SceneHandlerScript : MonoBehaviour
 {
+    private int level;
+    ScoreScript Score;
+    void Start()
+    {
+        Score = FindObjectOfType<ScoreScript>();        
+        level = Score.CurrentLevel;
+    }
+
     public void LoadMainMenuScene(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuUIController");
     }
     public void LoadGameScene(){
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameController");
+        if(level==2){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+        }
+        else if (level==3){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
+        }
+        else{            
+            Score.SetScore(300);
+            Score.SetLevel(1);
+            Score.SetHP(3); 
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameController");
+        }
     }
     public void LoadCustomizationScene(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("CustomizationUIController");

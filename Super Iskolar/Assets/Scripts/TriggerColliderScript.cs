@@ -8,11 +8,15 @@ public class TriggerColliderScript : MonoBehaviour
     public Rigidbody2D player;
     private Vector3 respawnPoint;
     public GameObject fallDetector; // only if fallDetector changes position
+    public GameObject VictoryUI, GameInputUI;
     
+    private int playerHP, scoreText, level;
+    ScoreScript Score;
     // Start is called before the first frame update
     void Start()
     {
         respawnPoint = player.transform.position; // spawn position of player is respawn point
+        Score = FindObjectOfType<ScoreScript>();
     }
 
     // Update is called once per frame
@@ -46,19 +50,31 @@ public class TriggerColliderScript : MonoBehaviour
         
         if(collision.tag == "GoalLevel1")
         {
-            Time.timeScale = 1f;   
+            Time.timeScale = 1f;
+            Score.SetScore(IskolarSpriteScript.scoreText);
+            Score.SetLevel(2);
+            Score.SetHP(IskolarSpriteScript.playerHP);   
+            Time.timeScale = 0f;
             UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
-        }
-        
+        }        
         if(collision.tag == "GoalLevel2")
         {
             Time.timeScale = 1f;   
+            Score.SetScore(IskolarSpriteScript.scoreText);
+            Score.SetLevel(3);
+            Score.SetHP(IskolarSpriteScript.playerHP); 
+            Time.timeScale = 0f;
             UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
         }
         if(collision.tag == "GoalLevel3")
         {
             Time.timeScale = 1f;   
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+            GameInputUI.SetActive(false);
+            VictoryUI.SetActive(true);
+            Time.timeScale = 0f;
+            Score.SetScore(IskolarSpriteScript.scoreText);
+            Score.SetLevel(1);
+            Score.SetHP(IskolarSpriteScript.playerHP); 
         }
     }
     

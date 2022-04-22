@@ -18,7 +18,7 @@ public class InterpretInputControllerScript : MonoBehaviour
         sp= GetComponent<SpriteRenderer>();
         moveSpeed = 6f;
         jumpForce = 500f;
-        dashForce = 6f;
+        dashForce = 8f;
         dashTime = 0.15f;            // time period of dashing; counted using dashTimer
         dashCoolDown = 1f;          // time period between dashes; counted using dashTime
         moveLeft = false;

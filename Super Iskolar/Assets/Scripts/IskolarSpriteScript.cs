@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class IskolarSpriteScript : MonoBehaviour
 {
-    public static int playerHP;
+    public static int playerHP, scoreText, level;
+    ScoreScript Score;
     // Start is called before the first frame update
     void Start()
     {
-        playerHP = 3;
+        Score = FindObjectOfType<ScoreScript>();
         
+        scoreText = Score.CurrentScore;
+        level = Score.CurrentLevel;
+        playerHP = Score.CurrentHP;
     }
 
     // Update is called once per frame
