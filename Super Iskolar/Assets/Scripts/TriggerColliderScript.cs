@@ -43,9 +43,23 @@ public class TriggerColliderScript : MonoBehaviour
             }
         }
 
-        if(collision.tag == "Collectible")
+        if(collision.tag == "Collectible1" || collision.tag == "Collectible2" || collision.tag == "Collectible3")
         {
             Destroy(collision.gameObject);
+
+            if(collision.tag == "Collectible1")
+            {
+                CollectibleScript.Costume1Status = true;
+            }
+            else if(collision.tag == "Collectible2")
+            {
+                CollectibleScript.Costume2Status = true;
+            }
+            else if(collision.tag == "Collectible3")
+            {
+                CollectibleScript.Costume3Status = true;
+            }
+
         }
         
         if(collision.tag == "GoalLevel1")
