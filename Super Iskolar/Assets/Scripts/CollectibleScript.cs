@@ -19,9 +19,9 @@ public class CollectibleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bool Costume1Status = false;
-        bool Costume2Status = false;
-        bool Costume3Status = false;
+        Costume1Status = false;
+        Costume2Status = false;
+        Costume3Status = false;
 
         if (CollectibleScript.Costume1Status == false)
         {

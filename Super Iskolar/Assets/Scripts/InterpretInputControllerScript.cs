@@ -43,7 +43,10 @@ public class InterpretInputControllerScript : MonoBehaviour
         isIskolarFacingleft = false;
     }
     public void Jump(){
-        if (rb.velocity.y ==0 && isGrounded){
+        // if (rb.velocity.y ==0 && isGrounded){
+        //     rb.AddForce(Vector2.up * jumpForce);
+        // }
+        if (rb.velocity.y ==0){
             rb.AddForce(Vector2.up * jumpForce);
         }
     }
