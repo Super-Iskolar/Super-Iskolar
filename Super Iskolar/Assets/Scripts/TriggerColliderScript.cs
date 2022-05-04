@@ -13,10 +13,13 @@ public class TriggerColliderScript : MonoBehaviour
     private int playerHP, scoreText, level;
     ScoreScript Score;
     // Start is called before the first frame update
+     Vector3 originalPos;
     void Start()
     {
         respawnPoint = player.transform.position; // spawn position of player is respawn point
         Score = FindObjectOfType<ScoreScript>();
+
+        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
     // Update is called once per frame
@@ -92,4 +95,7 @@ public class TriggerColliderScript : MonoBehaviour
         }
     }
     
+    public void ResetPosition(){
+        player.transform.position = originalPos;
+    }
 }
