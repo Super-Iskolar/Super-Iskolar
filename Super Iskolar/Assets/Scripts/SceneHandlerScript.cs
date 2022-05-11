@@ -38,4 +38,7 @@ public class SceneHandlerScript : MonoBehaviour
     public void LoadTutorialScreen(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialController");
     }
+    public void LoadCredits(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+    }
 }
