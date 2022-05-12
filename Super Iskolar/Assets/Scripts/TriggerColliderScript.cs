@@ -53,14 +53,17 @@ public class TriggerColliderScript : MonoBehaviour
             if(collision.tag == "Collectible1")
             {
                 CollectibleScript.Costume1Status = true;
+                UpdateCollectibleScript.C1found = true;
             }
             else if(collision.tag == "Collectible2")
             {
                 CollectibleScript.Costume2Status = true;
+                UpdateCollectibleScript.C2found = true;
             }
             else if(collision.tag == "Collectible3")
             {
                 CollectibleScript.Costume3Status = true;
+                UpdateCollectibleScript.C3found = true;
             }
 
         }

@@ -10,6 +10,8 @@ public class InterpretInputControllerScript : MonoBehaviour
     private float moveSpeed, jumpForce, dashForce,dashTime, dashTimeCurrent, dashCoolDown, dashTimer = 0f;
     private bool moveLeft, moveRight,moveDash, isDashing, isGrounded;
     public static bool isIskolarFacingleft;
+    public Sprite[] spriteArrayRight;
+    public Sprite[] spriteArrayLeft;
     
     // Start is called before the first frame update
     void Start()
@@ -90,11 +92,10 @@ public class InterpretInputControllerScript : MonoBehaviour
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
         }
         if(isIskolarFacingleft){
-            sp.sprite = left;
+            sp.sprite = spriteArrayLeft[ChangeCostumeScript.CurrentCostume];
         }else{
-            sp.sprite = right;
+            sp.sprite = spriteArrayRight[ChangeCostumeScript.CurrentCostume];
         }
-        
         
     }
     void OnCollisionEnter2D(Collision2D col)
